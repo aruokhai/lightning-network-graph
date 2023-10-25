@@ -16,7 +16,7 @@ export class LndRestClient {
     public async getGraph(): Promise<Lnd.Graph> {
         // Exercise: use the `get` method below to call `/v1/graph` API
         // and return the results
-        return undefined;
+        return this.get('/v1/graph');
     }
 
     /**

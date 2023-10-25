@@ -15,12 +15,13 @@ export const GraphScene = () => {
         // `graphRef.current.createGraph`
         api.fetchGraph().then((graph: Lnd.Graph) => {
             console.log(graph);
-            // Todo
+            graphRef.current.createGraph(graph)
         });
     }, []);
 
     useSocket("graph", (update: Lnd.GraphUpdate) => {
         // Exercise: Call `graphRef.current.updateGraph` with the update
+        graphRef.current.updateGraph(update);
     });
 
     return (

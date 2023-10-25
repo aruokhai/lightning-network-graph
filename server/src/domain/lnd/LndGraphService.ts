@@ -33,7 +33,7 @@ export class LndGraphService extends EventEmitter implements IGraphService {
         // Exercise: subscribe to the Lnd graph updates using `this.lnd.subscribeGraph`
         // and emit a "update" event each time the handler is called using `this.emit`
         return this.lnd.subscribeGraph((update: Lnd.GraphUpdate) => {
-            // Todo
+            this.emit("update",update)
         });
     }
 }

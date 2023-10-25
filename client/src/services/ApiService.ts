@@ -11,6 +11,6 @@ export class ApiService {
     // Exercise: Create a public fetchGraph method that returns Promise<Lnd.Graph>.
     // You can use the `get` helper method above by supplying it with the path /api/graph.
     public async fetchGraph(): Promise<Lnd.Graph> {
-        return undefined;
+        return this.get("/api/graph");
     }
 }
